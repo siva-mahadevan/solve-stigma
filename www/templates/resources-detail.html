@@ -1,0 +1,16 @@
+<ion-view title="{{::resource.name}}">
+	<ion-content class="has-header">
+		<div class="card">
+			<div class="item item-positive">
+				{{::resource.name}}
+				<rating ng-model="::resource.rating" max="5" readonly="true"></rating>
+			</div>
+
+			<div class="item item-body">
+				<img class="full-image" ng-src="../img/{{::resource.image}}">
+				<p>{{::resource.description}}</p>
+				<strong>{{::resource.bold}}</strong>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

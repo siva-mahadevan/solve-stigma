@@ -1,0 +1,20 @@
+<ion-view title="{{::roomName}}">
+	<ion-content class="has-header has-footer">
+		<ion-list>
+			<ion-item ng-repeat="m in messages" class="item item-icon-left">
+				<i class="icon" ng-class="{'ion-ios-person-outline': m.name == currentUserName, 'ion-person': m.name != currentUserName}"></i>
+				<h2>{{::m.name}}</h2>
+				<p>{{::m.message}}</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>
+	<div class="bar bar-footer item-input-inset">
+		<label class="item-input-wrapper">
+			<i class="icon ion-chatbox-working placeholder-icon"></i>
+			<input ng-model="currentMessage" ng-submit="sendMessage()" type="text" placeholder="Enter message...">
+		</label>
+		<button ng-click="sendMessage()" class="button button-outline button-positive">
+			Send
+		</button>
+	</div>
+</ion-view>

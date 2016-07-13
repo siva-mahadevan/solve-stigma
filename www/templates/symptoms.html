@@ -1,0 +1,19 @@
+<ion-view view-title="Identify Symptoms">
+	<ion-content class="padding">
+		<div class="list list-inset">
+			<label class="item item-input">
+				<i class="icon ion-search placeholder-icon"></i>
+				<input ng-model="search.keywords" type="text" placeholder="Enter symptoms...">
+			</label>
+		</div>
+
+		<div ng-repeat="d in disorders | filter:search:strict" class="card">
+			<div class="item item-divider item-positive">
+				{{::d.name}}
+			</div>
+			<div class="item item-text-wrap">
+				{{::d.description}}
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

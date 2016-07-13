@@ -1,0 +1,99 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+$positive:                        #800000 !default;
+$calm:                            #f1c40f !default;
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+#pre-test {
+	li {
+		width: 1em;
+		height: 1em;
+		text-align: center;
+		line-height: 1em;
+		border-radius: 0.5em;
+		background: dodgerblue;
+		margin: 0 0.5em;
+		display: inline-block;
+		color: white;
+		position: relative;
+	}
+
+	li::before {
+		content: '';
+		position: absolute;
+		top: .45em;
+		left: -2em;
+		width: 2em;
+		height: .1em;
+		background: dodgerblue;
+		z-index: -1;
+	}
+
+	li:first-child::before { display: none; }
+	.active { background: dodgerblue; }
+	.active ~ li { background: lightblue; }
+	.active ~ li::before { background: lightblue; }
+}
+
+ul.rating li {
+	display: inline;
+	border: 0px;
+	background: none;
+	padding: 5px 10px;
+}
+
+ul.rating li i {
+	font-size: 30px;
+}
+
+.title-image {
+	margin-top: 8px;
+	height: 27px;
+	vertical-align: top;
+}
+
+#home {
+	.col {
+		text-align: center;
+
+		button {
+			padding: 25px 40px;
+			i::before { font-size: 60px; }
+		}
+	}
+}
+
+#pre-test {
+	.container{
+		padding: 25px;
+		button {
+			font-size: 12px;
+			padding: 10px 15px;
+			line-height: 1.25;
+		}
+	}
+}
+
+#pre-test-results {
+	.item {
+		font-size: 14px;
+		small { color: #800000; }
+	}
+}

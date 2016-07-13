@@ -1,0 +1,12 @@
+{
+  "name": "SolveStigma",
+  "app_id": "8091289e",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

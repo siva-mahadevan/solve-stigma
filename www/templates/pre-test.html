@@ -1,0 +1,27 @@
+<ion-view title="Pre-Test">
+	<ion-content id="pre-test" class="has-header" style="background-color: #34495e; text-align: center">
+		<br>
+		<div class="container">
+			<h1 style="color: white">{{questions[currentQuestion].question}}</h1>
+			<div ng-repeat="row in questions[currentQuestion].rows" class="row">
+				<div class="col col-50">
+					<button ng-click="chooseAnswer(answer)" ng-init="answer = questions[currentQuestion].answers[row[0]]" class="button button-large button-block button-positive">
+						{{::answer.mainText}}
+						<!-- <small ng&#45;if="::answer.subText">{{::answer.subText}}</small> -->
+					</button>
+				</div>
+				<div ng-if="questions[currentQuestion].answers[row[1]]" class="col col-50">
+					<button ng-click="chooseAnswer(answer)" ng-init="answer = questions[currentQuestion].answers[row[1]]" class="button button-large button-block button-positive">
+						{{::answer.mainText}}
+						<!-- <small ng&#45;if="::answer.subText">{{::answer.subText}}</small> -->
+					</button>
+				</div>
+			</div><br>
+		</div>
+
+		<ul class="bar bar-footer bar-stable">
+			<li ng-repeat="t in ::questions" ng-class="{'active': $index == currentQuestion}">
+		</ul>
+	</ion-content>
+</ion-view>
+

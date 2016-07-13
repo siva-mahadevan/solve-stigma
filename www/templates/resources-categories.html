@@ -1,0 +1,9 @@
+<ion-view title="Categories">
+	<ion-content class="has-header">
+		<ion-list>
+			<ion-item ng-repeat="(category, v) in ::categories" ui-sref="resources.items({category: category})">
+				{{::category}}
+			</ion-item>
+		</ion-list>
+	</ion-content>
+</ion-view>

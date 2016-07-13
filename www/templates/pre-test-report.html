@@ -1,0 +1,15 @@
+<ion-view title="Pre-Test Results">
+	<ion-content id="pre-test-results" class="has-header">
+		<div ng-repeat="q in ::questions" class="list list-inset">
+			<div class="item">
+				{{$index + 1}}. {{::q.question}}<br>
+				<small>{{userAnswers[$index].mainText}}</small>
+			</div>
+		</div>
+
+		<button ng-click="resetTest()" class="button button-block button-positive">
+			Take the Pre-Test again
+		</button>
+	</ion-content>
+</ion-view>
+
